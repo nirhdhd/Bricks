@@ -4,9 +4,18 @@ import "./index.css";
 import Login from "./components/login/Login";
 import * as serviceWorker from "./serviceWorker";
 
+
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import theme from './theme'
+
+
+
+
 ReactDOM.render(
   <React.StrictMode>
-    <Login />
+    <ThemeProvider theme={theme}>
+      <Login />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

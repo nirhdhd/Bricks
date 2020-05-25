@@ -14,7 +14,7 @@ function Login() {
 
   return (
     <div>
-      <AppBar color="inherit" position="static">
+      <AppBar color="primary.main" position="static">
         <Toolbar>
           <Typography variant="h6">Bricks</Typography>
         </Toolbar>
