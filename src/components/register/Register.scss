@@ -1,0 +1,36 @@
+
+.body{
+
+    text-align: center;
+    margin-top: 10%;
+}
+
+.Bricks{
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Roboto';
+    color: #ed4b82;
+}
+.registerLink{
+    text-decoration: none;
+    color: blue;
+    margin-top: 10px;
+    font-size: 14px;
+
+}
+.buttonConfirm{
+    margin-top: 10px;
+}
+.headLine{
+    font-size: "50px"
+}
+.body{
+    flex: auto;flex-direction: column;
+}
+.textFil{
+    padding-top:30px
+}
+.errorMesseage{
+    margin: 0px;
+    color: red;
+}
