@@ -16,13 +16,15 @@ function Home() {
 
             <div className="content" >
 
-                <div className="userDetails">hi Nir</div>
+                <div className="userDetails">Hi Nir</div>
 
-                <Button variant="contained" color="primary">create worksheet</Button>
-                <Button variant="contained" color="primary">my profile</Button>
-                <Button variant="contained" color="primary">password</Button>
-                <Button variant="contained" color="primary">about us</Button>
 
+                <div className="buttonsPlace">
+                    <Button className="buttonContent" variant="contained">create worksheet</Button>
+                    <Button className="buttonContent" variant="contained">my profile</Button>
+                    <Button className="buttonContent" variant="contained">password</Button>
+                    <Button className="buttonContent" variant="contained">about us</Button>
+                </div>
 
             </div>
         </div>

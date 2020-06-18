@@ -25,9 +25,9 @@ function Login() {
         </Toolbar>
       </AppBar>
 
-      <header className="Bricks"
-        style={{ fontFamily: 'Roboto' }}> Bricks
-             </header>
+      <header className="Bricks"> Bricks</header>
+
+
 
       <h1 >Login</h1>
 
@@ -46,12 +46,11 @@ function Login() {
         type="password"
         variant="outlined" />
 
-      <div className="buttonConfirm">
-
+      <div >
         <Button
-          variant="contained"
-          color="secondary">confirm
-               </Button>
+          className="buttonConfirm"
+          variant="contained">confirm
+        </Button>
       </div >
       <Link className="registerLink" to="/register">don't not have an account? Sign up here</Link>
 

@@ -142,11 +142,11 @@ function Register() {
                 <p className="errorMesseage">{errors.passwordEqual}</p>
 
 
-                <div className="buttonConfirm">
-                    <Button
+                <div>
+                    <Button className="buttonConfirm"
                         type="submit"
                         variant="contained"
-                        color="secondary">
+                    >
                         confirm
                     </Button>
                 </div>

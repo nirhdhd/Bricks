@@ -1,3 +1,11 @@
+
+/*----------------- fonts import -----------------*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&family=Source+Sans+Pro:wght@600&display=swap');
+/*----------------- /fonts import -----------------*/
+
+
 html {
   width: 1200px;
   height: 768px;
@@ -18,3 +26,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+
+.appBar{
+  background-color: #4d3e3e;
+}
+
+
+
