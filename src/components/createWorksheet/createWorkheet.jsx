@@ -1,31 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Button from '@material-ui/core/Button';
 import './createWorkheet.scss'
 import HorizontalStepper from '../../horizontalStepper'
+import Step_one from './step_one/step_one'
+import Step_two from './step_two/step_two'
+
 
 function CreateWorksheet() {
 
+    const [step, setStep] = useState();
 
-    const images = ["https://i.pinimg.com/originals/f2/b5/df/f2b5df9a590e1f196684434c9871dfb1.jpg",
-        "https://images.wsj.net/im-146778?width=1280&size=1"]
+
+
+
     return (
-        <div className="body">
+        <div >
+
             <AppBar className="appBar" >
                 <Toolbar>
-                    <Typography variant="h6">Bricks</Typography>
+                    <Typography variant="h6">Bricks {step}</Typography>
                 </Toolbar>
             </AppBar>
-            <HorizontalStepper />
-
-            <div> {images.map((x) => <img src={x} />)}
-
-
-            </div>
-
-
+            <HorizontalStepper onStepChange={val => setStep(val)} />
+            <Step_one show={step == 0 ? 'block' : 'none'} />////need to changeeee
+            <Step_two display={step == 1 ? 'block' : 'none'} />
         </div>
 
     )

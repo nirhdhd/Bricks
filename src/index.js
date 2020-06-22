@@ -6,6 +6,8 @@ import Login from './components/login/Login';
 import Register from './components/register/Register';
 import Home from './components/home/home.jsx';
 import CreateWorksheet from './components/createWorksheet/createWorkheet.jsx'
+import Step_one from './components/createWorksheet/step_one/step_one.jsx'
+import Step_two from './components/createWorksheet/step_two/step_two.jsx'
 import { StylesProvider } from "@material-ui/core";
 import {
   BrowserRouter as Router,
@@ -25,6 +27,15 @@ function App() {
 
     <Route exact path="/">
       <Home />
+    </Route>
+
+
+    <Route exact path="/createWorksheet/step_two">
+      <Step_two />
+    </Route>
+
+    <Route exact path="/createWorksheet/step_one">
+      <Step_one />
     </Route>
 
     <Route exact path="/createWorksheet">
