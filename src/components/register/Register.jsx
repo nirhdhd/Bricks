@@ -65,7 +65,7 @@ function Register() {
             errors.passwordRequired = "you must wrote password";
             isError = true;
         }
-        if (data.password != data.passwordConfirm) {
+        if (data.password !== data.passwordConfirm) {
             errors.passwordEqual = "your passwords do not match";
             isError = true;
         }

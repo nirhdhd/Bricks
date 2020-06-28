@@ -119,11 +119,11 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return "Select campaign settings...";
+      return "step 1";
     case 1:
-      return "What is an ad group anyways?";
+      return "step 2";
     case 2:
-      return "This is the bit I really care about!";
+      return "step 3";
     default:
       return "Unknown step";
   }
@@ -133,10 +133,10 @@ export default function CustomizedSteppers(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(0);
   const steps = getSteps();
+  props.onStepChange(activeStep);
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    props.onStepChange(activeStep);
   };
 
   const handleBack = () => {
@@ -164,28 +164,28 @@ export default function CustomizedSteppers(props) {
             </Typography>
           </div>
         ) : (
-          <div>
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <Button
-                disabled={activeStep === 0}
-                onClick={handleBack}
-                className={classes.button}
-              >
-                Back
+            <div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <Button
+                  disabled={activeStep === 0}
+                  onClick={handleBack}
+                  className={classes.button}
+                >
+                  Back
               </Button>
-              <Typography className={classes.instructions}>
-                {getStepContent(activeStep)}
-              </Typography>
-              <Button
-                variant="contained"
-                onClick={handleNext}
-                className={classes.button}
-              >
-                {activeStep === steps.length - 1 ? "Finish" : "Next"}
-              </Button>
+                <Typography className={classes.instructions}>
+                  {getStepContent(activeStep)}
+                </Typography>
+                <Button
+                  variant="contained"
+                  onClick={handleNext}
+                  className={classes.button}
+                >
+                  {activeStep === steps.length - 1 ? "Finish" : "Next"}
+                </Button>
+              </div>
             </div>
-          </div>
-        )}
+          )}
       </div>
     </div>
   );

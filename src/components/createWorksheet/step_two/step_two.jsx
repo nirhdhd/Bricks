@@ -2,18 +2,9 @@ import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import "../step_two/step_two.scss";
 
-var toDisplay;
-
 function Step_two(props) {
-  useEffect(() => {
-    const stepNum = props.stepNum;
-    console.log("stepNum", stepNum);
-    toDisplay = stepNum == 0 ? { display: "inherit" } : { display: "none" };
-    console.log("toDisplay", toDisplay);
-  });
-
   return (
-    <div style={toDisplay}>
+    <div >
       <div style={{ display: "flex" }}>
         <div style={{ flex: 0.1 }}></div>
         <TextField
