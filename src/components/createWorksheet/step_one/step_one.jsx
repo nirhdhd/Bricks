@@ -6,6 +6,7 @@ function Step_one(props) {
 
   const handleChange = (e) => {
     let value = e.target.value;
+    //console.log(value);
     props.onStepOneChange(value);
   }
 
@@ -15,9 +16,8 @@ function Step_one(props) {
         <div style={{ width: "300px", flex: 1 }}></div>
 
         <TextField
-          controlled
           value={props.textVal}
-          inputProps={{ style: { fontFamily: "Source Sans Pro" } }}
+          inputProps={{ style: { fontFamily: "Source Sans Pro", fontSize: '20px' } }}
           className="textFiels_place"
           id="standard-multiline-static"
           placeholder="Your text goes here..."
