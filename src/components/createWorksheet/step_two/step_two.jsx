@@ -2,12 +2,25 @@ import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import "../step_two/step_two.scss";
 
+let textForTextfiled = "";
+
+
 function Step_two(props) {
+
+
+  useEffect(() => {
+    textForTextfiled = props.textVal;
+
+  });
+
+
+
   return (
     <div >
       <div style={{ display: "flex" }}>
         <div style={{ flex: 0.1 }}></div>
-        <TextField
+        <TextField controlled
+          value={textForTextfiled}
           inputProps={{ style: { fontFamily: "Source Sans Pro" } }}
           className="textFiels_place"
           id="standard-multiline-static"

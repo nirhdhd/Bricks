@@ -14,17 +14,17 @@ function CreateWorksheet() {
   const [parentToChild, setParentToChild] = useState();
 
 
+
   const getComponent = (step) => {
     switch (step) {
       case 0:
-        return <Step_one />
+        return <Step_one textVal={text} onStepOneChange={(val) => { setText(val); }} />
       case 1:
-        return <Step_two />
+        return <Step_two textVal={text} />
       default:
         return;
     }
   }
-
 
   return (
     <div>
@@ -33,12 +33,8 @@ function CreateWorksheet() {
           <Typography variant="h6">Bricks</Typography>
         </Toolbar>
       </AppBar>
-      <HorizontalStepper onStepChange={(val) => setStep(val)} />
+      <HorizontalStepper onStepChange={(val) => { setStep(val); }} />
       {getComponent(step)}
-
-
-
-
     </div>
   );
 }
