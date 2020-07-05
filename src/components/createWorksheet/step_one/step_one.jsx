@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import "../step_one/step_one.scss";
+import ErrorNoInputText from './ErrorNoInputText'
 
 function Step_one(props) {
 
