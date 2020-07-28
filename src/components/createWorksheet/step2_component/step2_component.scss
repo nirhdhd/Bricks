@@ -1,0 +1,43 @@
+.Bricks {
+  font-size: 70px;
+  text-align: center;
+  color: #ff926b;
+}
+.registerLink {
+  color: blue;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.buttonConfirm {
+  margin-top: 8px;
+}
+
+.body {
+  text-align: center;
+}
+
+.textFiels_place {
+  flex: 4;
+  margin-top: 20px;
+}
+.next_Button {
+  background-color: #ffc38b;
+  width: 250px;
+  height: 80px;
+  font-size: 30px;
+  margin-top: 50px;
+  margin: 30px;
+}
+
+.divBody {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wordsStore {
+  flex: 2;
+  background-color: rgb(206, 206, 206);
+  border: 2px solid black;
+}

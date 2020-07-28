@@ -2,18 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
-import Login from './components/login/Login';
-import Register from './components/register/Register';
-import Home from './components/home/home.jsx';
-import CreateWorksheet from './components/createWorksheet/createWorkheet.jsx'
-import Step_one from './components/createWorksheet/step_one/step_one.jsx'
-import Step_two from './components/createWorksheet/step_two/step_two.jsx'
+import Login from "./components/login/Login";
+import Register from "./components/register/Register";
+import Home from "./components/home/home.jsx";
+import CreateWorksheet from "./components/createWorksheet/createWorkheet.jsx";
+import Step_1 from "./components/createWorksheet/step1_component/step1_component.jsx";
+import Step_2 from "./components/createWorksheet/step2_component/step2_component";
 import { StylesProvider } from "@material-ui/core";
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  useLocation
+  useLocation,
 } from "react-router-dom";
 
 function usePageViews() {
@@ -22,50 +22,40 @@ function usePageViews() {
 
 function App() {
   usePageViews();
-  return <Switch>
+  return (
+    <Switch>
+      <Route exact path="/">
+        <CreateWorksheet />
+      </Route>
 
+      <Route exact path="/">
+        <Home />
+      </Route>
 
-    <Route exact path="/">
-      <Home />
-    </Route>
+      <Route exact path="/createWorksheet">
+        <CreateWorksheet />
+      </Route>
 
+      <Route exact path="/home">
+        <Home />
+      </Route>
 
-    <Route exact path="/createWorksheet/step_two">
-      <Step_two />
-    </Route>
+      <Route exact path="/login">
+        <Login />
+      </Route>
 
-    <Route exact path="/createWorksheet/step_one">
-      <Step_one />
-    </Route>
-
-    <Route exact path="/createWorksheet">
-      <CreateWorksheet />
-    </Route>
-
-    <Route exact path="/home">
-      <Home />
-    </Route>
-
-    <Route exact path="/login">
-      <Login />
-    </Route>
-
-    <Route exact path="/register">
-      <Register />
-    </Route>
-
-
-
-
-
-  </Switch>;
+      <Route exact path="/register">
+        <Register />
+      </Route>
+    </Switch>
+  );
 }
 
-
 ReactDOM.render(
-  <React.StrictMode >
+  <React.StrictMode>
     <Router>
-      <StylesProvider injectFirst>// react material-UI מאפשר דריסה ש הצבעים והתכנות הדיפולטיביות של ה 
+      <StylesProvider injectFirst>
+        // react material-UI מאפשר דריסה ש הצבעים והתכנות הדיפולטיביות של ה
         <App />
       </StylesProvider>
     </Router>

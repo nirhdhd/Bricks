@@ -3,28 +3,10 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import "./createWorkheet.scss";
-import HorizontalStepper from "../../horizontalStepper";
-import Step_one from "./step_one/step_one";
-import Step_two from "./step_two/step_two";
-
+import Step_1 from "../createWorksheet/step1_component/step1_component";
+import Step_2 from "../createWorksheet/step2_component/step2_component";
 function CreateWorksheet() {
-  const [step, setStep] = useState();
   const [text, setText] = useState();
-  const [wordsStore, setWordsStore] = useState();
-  const [parentToChild, setParentToChild] = useState();
-
-
-
-  const getComponent = (step) => {
-    switch (step) {
-      case 0:
-        return <Step_one textVal={text} onStepOneChange={(val) => { setText(val); }} />
-      case 1:
-        return <Step_two textVal={text} />
-      default:
-        return;
-    }
-  }
 
   return (
     <div>
@@ -33,8 +15,16 @@ function CreateWorksheet() {
           <Typography variant="h6">Bricks</Typography>
         </Toolbar>
       </AppBar>
-      <HorizontalStepper onStepChange={(val) => { setStep(val); }} />
-      {getComponent(step)}
+      {/* <Step_1
+        onStepChange={(val) => {
+          setText(val);
+        }}
+      /> */}
+      <Step_2
+        onStepChange={(val) => {
+          setText(val);
+        }}
+      />
     </div>
   );
 }
